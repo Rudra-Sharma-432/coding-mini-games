@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001 - Aim Trainer | mini-games</title>
+    <link rel="stylesheet" href="brief.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-left">
+            <a href="../../" class="brand">mini-games</a>
+            <span class="crumb">/ web / 01_aim-trainer</span>
+        </div>
+        <span class="policy-badge">No AI / LLM Allowed</span>
+    </header>
+
+    <main>
+        <!-- Problem Header -->
+        <section class="problem-header">
+            <div class="meta-tags">
+                <span class="tag id">PROBLEM 001</span>
+                <span class="tag easy">Easy</span>
+                <span class="tag stack">HTML · CSS · JavaScript</span>
+            </div>
+            <h1>Aim Trainer</h1>
+            <p class="subtitle">Measure reaction speed and pointer accuracy using DOM manipulation and coordinate math.</p>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="doc-section">
+            <h2>1. Problem Statement</h2>
+            <p>
+                Create a browser-based Aim Trainer where a circular target spawns at random positions inside a fixed-size playing arena. Each time the player clicks the target, it immediately relocates to a new valid position until <strong>20 targets</strong> are hit.
+            </p>
+        </section>
+
+        <!-- Visual Reference -->
+        <section class="doc-section">
+            <h2>2. Reference Example</h2>
+            <p>
+                Your game should work similarly to the
+                <a href="https://humanbenchmark.com/tests/aim" target="_blank" rel="noopener" class="inline-link">Human Benchmark Aim Trainer ↗</a>:
+                click targets in sequence, track remaining targets, and show the average time per target (in ms) at the end.
+            </p>
+
+            <figure class="reference-box">
+                <img src="./assets/reference.png" alt="Human Benchmark Aim Trainer reference screenshot">
+                <figcaption>
+                    Reference: <a href="https://humanbenchmark.com/tests/aim" target="_blank" rel="noopener">humanbenchmark.com/tests/aim ↗</a>
+                    — place your screenshot at <code>web/01_aim-trainer/assets/reference.png</code>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Interactive Requirements Checklist -->
+        <section class="doc-section">
+            <div class="section-header-row">
+                <h2>3. Functional Requirements</h2>
+                <span class="progress-text" id="req-progress">0 / 7 completed</span>
+            </div>
+            <p class="helper-note">Check off requirements as you implement them (saved automatically in your browser).</p>
+
+            <ul class="checklist" id="req-list">
+                <li>
+                    <label>
+                        <input type="checkbox" data-req="arena">
+                        <span>Create a fixed-size game arena (e.g., <code>600px × 400px</code>) with <code>position: relative</code>.</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" data-req="target">
+                        <span>Render a circular target (e.g., <code>40px × 40px</code>, <code>border-radius: 50%</code>) using <code>position: absolute</code>.</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" data-req="bounds">
+                        <span>Move the target to a random position on click while keeping it strictly inside the arena boundaries.</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" data-req="count">
+                        <span>Track successful hits and stop the round after <strong>20 hits</strong>.</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" data-req="time">
+                        <span>Record timestamps with <code>performance.now()</code> to calculate average reaction time in milliseconds.</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" data-req="results">
+                        <span>Display total time and average reaction time when the round ends.</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" data-req="restart">
+                        <span>Provide a <strong>Restart</strong> button that resets score, timer, and target position.</span>
+                    </label>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Constraints -->
+        <section class="doc-section">
+            <h2>4. Constraints &amp; Rules</h2>
+            <ul class="plain-list">
+                <li>Use <strong>vanilla HTML, CSS, and JavaScript</strong> only.</li>
+                <li>No external libraries, frameworks, or canvas game engines.</li>
+                <li><strong>Strict No-AI Policy:</strong> Do not use ChatGPT, Gemini, Claude, or Copilot. Use Google Search and official documentation only.</li>
+            </ul>
+        </section>
+
+        <!-- Bonus Tasks -->
+        <section class="doc-section">
+            <h2>5. Bonus Challenges</h2>
+            <ul class="plain-list">
+                <li>Track missed clicks (clicks inside the arena that miss the target) and calculate an <strong>Accuracy %</strong>.</li>
+                <li>Add difficulty presets that change target diameter (e.g., Small <code>25px</code>, Medium <code>40px</code>, Large <code>60px</code>).</li>
+                <li>Persist the player's fastest average reaction time using <code>localStorage</code>.</li>
+            </ul>
+        </section>
+
+        <!-- Research & Google Search Queries -->
+        <section class="doc-section">
+            <h2>6. Allowed Research &amp; Search Queries</h2>
+            <p class="helper-note">Stuck? Click any search query below to copy it and look it up on Google or MDN:</p>
+
+            <div class="search-chips" id="search-chips">
+                <button type="button" class="chip" data-query="JavaScript Math.random range min max MDN">JavaScript Math.random range min max MDN</button><br>
+                <button type="button" class="chip" data-query="JavaScript performance.now measure elapsed time MDN">JavaScript performance.now measure elapsed time MDN</button><br>
+                <button type="button" class="chip" data-query="CSS position relative and absolute inside container MDN">CSS position relative and absolute inside container MDN</button><br>
+                <button type="button" class="chip" data-query="JavaScript addEventListener click event MDN">JavaScript addEventListener click event MDN</button><br>
+                <button type="button" class="chip" data-query="JavaScript element style top left px MDN">JavaScript element style top left px MDN</button>
+            </div>
+
+            <div class="doc-links">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">MDN JavaScript Docs ↗</a>
+                <a href="https://javascript.info/" target="_blank" rel="noopener">JavaScript.info ↗</a>
+                <a href="https://www.w3schools.com/js/" target="_blank" rel="noopener">W3Schools JS Reference ↗</a>
+            </div>
+        </section>
+
+        <!-- Footer Navigation -->
+        <footer class="doc-footer">
+            <a href="../../" class="btn secondary">← Back to Problem Set</a>
+            <a href="./solution/" class="btn primary" id="solution-btn">View Solution →</a>
+        </footer>
+    </main>
+
+    <script src="brief.js"></script>
+</body>
+</html>
