@@ -28,7 +28,23 @@ the player's final performance.
 - [ ] Display the final result.
 - [ ] Add a restart option.
 
-## 3. Concepts to Learn
+## 3. Provided Assets
+
+The assets folder contains:
+
+- `target.png` — PNG version of the target.
+- `target.svg` — SVG version of the target.
+
+You can use either image as the clickable target.
+
+Asset paths:
+- `assets/target.png`
+- `assets/target.svg`
+
+You are allowed to use and modify these assets
+for your implementation.
+
+## 4. Concepts to Learn
 
 - DOM Manipulation
 - Event Handling
@@ -37,21 +53,21 @@ the player's final performance.
 - Date.now() / performance.now()
 - CSS Positioning
 
-## 4. Constraints
+## 5. Constraints
 
 - Use vanilla HTML, CSS and JavaScript.
 - Do not use external game engines.
 - Do not use JavaScript frameworks.
 - Keep the code readable and beginner-friendly.
 
-## 5. Bonus Tasks
+## 6. Bonus Tasks
 
 - Add a timer.
 - Track missed clicks.
 - Add different target sizes. (Difficulty: Easy, Medium, Hard)
 - Save the best score using localStorage.
 
-## 6. Learning Resources
+## 7. Learning Resources
 
 If you don't understand a concept, research it
 using Google Search and coding documentation.
@@ -71,7 +87,7 @@ Useful websites:
 - https://www.w3schools.com/
 - https://stackoverflow.com/
 
-## 7. Rules
+## 8. Rules
 
 - AI tools and LLMs are NOT allowed.
 - Do not use ChatGPT, Gemini, Claude or similar tools.
@@ -79,7 +95,7 @@ Useful websites:
 - You must understand and write your own code.
 - You may use the provided assets.
 
-## 8. Submission
+## 9. Submission
 
 Submit your completed HTML, CSS and JavaScript files.
 
